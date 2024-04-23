@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,49 +12,57 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <h1 class="navbar-brand" href="#"> <i class="bi bi-instagram p-1"></i>Instagram</h1>
 
-    <div class="modal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <p>Modal body text goes here.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+<body>
+  <!-- NAVEGADOR -->
+  <nav class="navbar bg-body-tertiary">
+
+    <h1 class="navbar-brand" href="#"> <i class="bi bi-instagram p-1"></i>Instagram</h1>
+    <div class="d-flex flex-col gap-2" id="navbarNavDropdown">
+      <!-- boton trigger modal -->
+      <button type="button" class="btn btn-success me-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Create a new post
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <h4 class="fw-bold fs-6 "> Caption: </h4>
+              <h5 class="form-control border" Caption>Add the caption of your post here</h5>
+              <div class="logos justify-content-start d-flex flex-row">
+                <h5 class="border rounded p-1"> <i class="bi bi-camera-fill"></i></h5>
+                <h5 class="border rounded p-1 ms-1"> <i class="bi bi-geo-alt-fill"></i></h5>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <button type="button" class="btn btn-success">Create a new post</button>
-        </li>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-            <i class="bi bi-gear-fill"></i>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><a class="dropdown-item" href="#">Accesibility</a></li>
-            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-          </ul>
-        </div>
-      </ul>
-    </div>
+
+      <!-- dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-gear-fill"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Accesibility</a></li>
+          <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+          <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+        </ul>
+      </div>
+  <!-- TABS -->
   </nav>
-  <ul class="nav nav-tabs justify-content-center" " id=" myTab" role="tablist">
+  <ul class="nav nav-tabs justify-content-center" id=" myTab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
         role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="bi bi-grid-3x3"></i></button>
@@ -63,56 +72,105 @@
         role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="bi bi-square-fill"></i></button>
     </li>
   </ul>
+
+  <!-- TABS CONTENT -->
   <div class="tab-content" id="myTabContent">
+    <!-- FEED GRID / TAB1-->
     <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+      <!-- GRID -->
       <div class="container-fluid text-center" id="grid">
         <div class="row">
-          <div class="col">
-            <img src="https://images.wallpapersden.com/image/download/cute-dog_bG5naG6UmZqaraWkpJRqZWWtamVl.jpg" alt="DogPicture">
+           <!-- column1 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+            <img class="img-fluid object-fit-cover" src="https://images.pexels.com/photos/3410513/pexels-photo-3410513.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Arquitecture">
           </div>
-          <div class="col">
-            <img src="https://images.wallpapersden.com/image/download/cute-dog_bG5naG6UmZqaraWkpJRqZWWtamVl.jpg" alt="DogPicture">
+          <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+            <img class="img-fluid object-fit-cover" src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Shoes">
           </div>
-          <div class="col">
-            <img src="https://images.wallpapersden.com/image/download/cute-dog_bG5naG6UmZqaraWkpJRqZWWtamVl.jpg" alt="DogPicture">
+          <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+            <img class="img-fluid object-fit-cover" src="https://images.pexels.com/photos/7911758/pexels-photo-7911758.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Arch">
+          </div>    
+          <!-- column2 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+            <img class="img-fluid object-fit-cover" src="https://images.pexels.com/photos/910625/pexels-photo-910625.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="redChair">
           </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <img src="https://images.wallpapersden.com/image/download/cute-dog_bG5naG6UmZqaraWkpJRqZWWtamVl.jpg" alt="DogPicture">
+          <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+            <img class="img-fluid object-fit-cover" src="https://images.pexels.com/photos/1367225/pexels-photo-1367225.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Prickly">
           </div>
-          <div class="col">
-            <img src="https://images.wallpapersden.com/image/download/cute-dog_bG5naG6UmZqaraWkpJRqZWWtamVl.jpg" alt="DogPicture">
+          <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+            <img class="img-fluid object-fit-cover" src="https://images.pexels.com/photos/1067556/pexels-photo-1067556.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Sofa">
           </div>
-          <div class="col">
-            <img src="https://images.wallpapersden.com/image/download/cute-dog_bG5naG6UmZqaraWkpJRqZWWtamVl.jpg" alt="DogPicture">
+          <!-- column3 -->
+          <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+            <img class="img-fluid object-fit-cover" src="https://images.pexels.com/photos/2181230/pexels-photo-2181230.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Neon">
           </div>
-        </div>
-        <div class="row">
-          <div class="col img-thumbnail">
-            <img src="https://images.wallpapersden.com/image/download/cute-dog_bG5naG6UmZqaraWkpJRqZWWtamVl.jpg" alt="DogPicture">
+          <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+            <img class="img-fluid object-fit-cover" src="https://images.pexels.com/photos/693895/pexels-photo-693895.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Lights">
           </div>
-          <div class="col">
-            <img src="https://images.wallpapersden.com/image/download/cute-dog_bG5naG6UmZqaraWkpJRqZWWtamVl.jpg" alt="DogPicture">
-          </div>
-          <div class="col">
-            <img src="https://images.wallpapersden.com/image/download/cute-dog_bG5naG6UmZqaraWkpJRqZWWtamVl.jpg" alt="DogPicture">
+          <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+            <img class="img-fluid object-fit-cover" src="https://images.pexels.com/photos/5946095/pexels-photo-5946095.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="FruitFace">
           </div>
         </div>
       </div>
     </div>
-    <div class="tab-pane fade  d-flex justify-content-center" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-      <div class="post border" style="width: 40rem">
-        <div clas="post-header d-flex justify-content-between">
-          <h2>Text</h2>
-          <h3>08/26</h3>
+
+    <!-- FEED VERTICAL/TAB 2 -->
+    <div class="tab-pane fade justify-content-center" id="profile-tab-pane" role="tabpanel"
+      aria-labelledby="profile-tab" tabindex="0">
+      <div class="feed d-flex flex-column p-10 align-items-center">
+        <!-- card 1 -->
+        <div class="card my-3">
+        <div class="postheader d-flex justify-content-between fs-6">
+          <h4>Artquitecture</h4>
+          <h4>08/26</h4>
         </div>
-        <img src="https://images.wallpapersden.com/image/download/cute-dog_bG5naG6UmZqaraWkpJRqZWWtamVl.jpg" alt="DogPicture">
-        <div class="post-footer">
-          <h3 class="footerTitle fw-bold fs-6">1024 likes</h3>
-          <p class="footerText">Aquí va todo el texto del post que tiene que ser mucho y por eso se usa un parrafo</p>
+        <img src="https://images.pexels.com/photos/3410513/pexels-photo-3410513.jpeg?auto=compress&cs=tinysrgb&w=600">
+        <div class="card-body">
+          <p class="card-text">Some quick example of how arquitecture is also art</p>
+          <h4 class="footerTitle fw-bold fs-6">1024 likes</h4>
         </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="card my-3">
+          <div class="postheader d-flex justify-content-between fs-6">
+            <h4>Shocking-shoes</h4>
+            <h4>09/26</h4>
+          </div>
+          <img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&w=600">
+          <div class="card-body">
+            <p class="card-text">White shoes will create white footprints?</p>
+            <h4 class="footerTitle fw-bold fs-6">2024 likes</h4>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="card my-3">
+          <div class="postheader d-flex justify-content-between fs-6">
+            <h4>Neutral Arch</h4>
+            <h4>10/26</h4>
+          </div>
+          <img src="https://images.pexels.com/photos/7911758/pexels-photo-7911758.jpeg?auto=compress&cs=tinysrgb&w=600"
+              class="card-img-top" alt="Arch">
+          <div class="card-body">
+            <p class="card-text">The perfect example of: simple is better</p>
+            <h4 class="footerTitle fw-bold fs-6">3054 likes</h4>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
+
+      
 </body>
 </html>
